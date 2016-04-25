@@ -36,6 +36,9 @@ namespace Cedita.Payroll.Rates
         public decimal SecondaryThreshold { get { return RateCache[_year].SecondaryThreshold; } }
         public decimal UpperAccrualPoint { get { return RateCache[_year].UpperAccrualPoint; } }
 
+        public decimal UpperSecondaryThreshold { get { return RateCache[_year].UpperSecondaryThreshold; } }
+        public decimal ApprenticeUpperSecondaryThreshold { get { return RateCache[_year].ApprenticeUpperSecondaryThreshold; } }
+
         public decimal StudentLoanThreshold { get { return RateCache[_year].StudentLoanThreshold; } }
         public decimal StudentLoanRate { get { return RateCache[_year].StudentLoanRate; } }
 

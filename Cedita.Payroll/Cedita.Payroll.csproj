@@ -52,6 +52,7 @@
     <Compile Include="Rates\Rates2012.cs" />
     <Compile Include="Rates\Rates2013.cs" />
     <Compile Include="Rates\Rates2014.cs" />
+    <Compile Include="Rates\Rates2016.cs" />
     <Compile Include="Rates\Rates2015.cs" />
     <Compile Include="Rates\TaxBracket.cs" />
     <Compile Include="StudentLoan.cs" />

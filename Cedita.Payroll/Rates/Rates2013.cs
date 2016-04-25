@@ -157,5 +157,21 @@ namespace Cedita.Payroll.Rates
         public decimal PensionLowerThreshold { get { return 5668m; } }
         public decimal PensionAutomaticEnrolment { get { return 9440m; } }
         public decimal PensionUpperThreshold { get { return 41450m; } }
+
+        public decimal UpperSecondaryThreshold
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public decimal ApprenticeUpperSecondaryThreshold
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

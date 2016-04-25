@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Cedita.Payroll.Rates
 {
-    internal class Rates2012 : IRateYear
+    internal class Rates2016 : IRateYear
     {
         public Dictionary<string, decimal> FixedCodes
         { 
@@ -15,7 +15,7 @@ namespace Cedita.Payroll.Rates
                 {
                     { "BR", 0.2m },
                     { "D0", 0.4m },
-                    { "D1", 0.5m },
+                    { "D1", 0.45m },
                     { "N1", 0 },
                     { "NT", 0 },
                 };
@@ -35,7 +35,7 @@ namespace Cedita.Payroll.Rates
                             EeE = 12.00m,
                             EeF = 2.00m,
                             ErB = 0.00m,
-                            ErC = 13.80m,
+                            ErC = 0.00m,
                             ErD = 13.80m,
                             ErE = 13.80m,
                             ErF = 13.80m
@@ -49,7 +49,7 @@ namespace Cedita.Payroll.Rates
                             EeE = 5.85m,
                             EeF = 2.00m,
                             ErB = 0.00m,
-                            ErC = 13.80m,
+                            ErC = 0.00m,
                             ErD = 13.80m,
                             ErE = 13.80m,
                             ErF = 13.80m
@@ -63,7 +63,7 @@ namespace Cedita.Payroll.Rates
                             EeE = 0.00m,
                             EeF = 0.00m,
                             ErB = 0.00m,
-                            ErC = 13.80m,
+                            ErC = 0.00m,
                             ErD = 13.80m,
                             ErE = 13.80m,
                             ErF = 13.80m
@@ -77,7 +77,7 @@ namespace Cedita.Payroll.Rates
                             EeE = 12.00m,
                             EeF = 2.00m,
                             ErB = 3.40m,
-                            ErC = 10.40m,
+                            ErC = 3.40m,
                             ErD = 10.40m,
                             ErE = 13.80m,
                             ErF = 13.80m
@@ -91,7 +91,21 @@ namespace Cedita.Payroll.Rates
                             EeE = 5.85m,
                             EeF = 2.00m,
                             ErB = 3.40m,
-                            ErC = 10.40m,
+                            ErC = 3.40m,
+                            ErD = 10.40m,
+                            ErE = 13.80m,
+                            ErF = 13.80m
+                        }
+                    },
+                    { 'I', new NiRateTable
+                        {
+                            EeB = 1.40m,
+                            EeC = 1.40m,
+                            EeD = 10.60m,
+                            EeE = 12.00m,
+                            EeF = 2.00m,
+                            ErB = 3.40m,
+                            ErC = 3.40m,
                             ErD = 10.40m,
                             ErE = 13.80m,
                             ErF = 13.80m
@@ -105,8 +119,22 @@ namespace Cedita.Payroll.Rates
                             EeE = 2.00m,
                             EeF = 2.00m,
                             ErB = 0.00m,
-                            ErC = 13.80m,
+                            ErC = 0.00m,
                             ErD = 13.80m,
+                            ErE = 13.80m,
+                            ErF = 13.80m
+                        }
+                    },
+                    { 'K', new NiRateTable
+                        {
+                            EeB = 1.40m,
+                            EeC = 1.40m,
+                            EeD = 2.00m,
+                            EeE = 2.00m,
+                            EeF = 2.00m,
+                            ErB = 3.40m,
+                            ErC = 3.40m,
+                            ErD = 10.40m,
                             ErE = 13.80m,
                             ErF = 13.80m
                         }
@@ -119,9 +147,37 @@ namespace Cedita.Payroll.Rates
                             EeE = 2.00m,
                             EeF = 2.00m,
                             ErB = 3.40m,
-                            ErC = 10.40m,
+                            ErC = 3.40m,
                             ErD = 10.40m,
                             ErE = 13.80m,
+                            ErF = 13.80m
+                        }
+                    },
+                    { 'M', new NiRateTable
+                        {
+                            EeB = 0.00m,
+                            EeC = 0.00m,
+                            EeD = 12.00m,
+                            EeE = 12.00m,
+                            EeF = 2.00m,
+                            ErB = 0.00m,
+                            ErC = 0.00m,
+                            ErD = 0.00m,
+                            ErE = 0.00m,
+                            ErF = 13.80m
+                        }
+                    },
+                    { 'Z', new NiRateTable
+                        {
+                            EeB = 0.00m,
+                            EeC = 0.00m,
+                            EeD = 2.00m,
+                            EeE = 2.00m,
+                            EeF = 2.00m,
+                            ErB = 0.00m,
+                            ErC = 0.00m,
+                            ErD = 0.00m,
+                            ErE = 0.00m,
                             ErF = 13.80m
                         }
                     },
@@ -134,44 +190,32 @@ namespace Cedita.Payroll.Rates
             {
                 return new List<TaxBracket>
                 {
-                    new TaxBracket { From = 0, To = 34370, Multiplier = 0.2m },
-                    new TaxBracket { From = 34370, To = 150000, Multiplier = 0.4m },
-                    new TaxBracket { From = 150000, To = Int32.MaxValue, Multiplier = 0.5m },
+                    new TaxBracket { From = 0, To = 32000, Multiplier = 0.2m },
+                    new TaxBracket { From = 32000, To = 150000, Multiplier = 0.4m },
+                    new TaxBracket { From = 150000, To = Int32.MaxValue, Multiplier = 0.45m },
                 };
             }
         }
 
-        public string DefaultTaxCode { get { return "810L"; } }
+        public string DefaultTaxCode { get { return "1100L"; } }
 
-        public decimal LowerEarningsLimit { get { return 5564; } }
-        public decimal UpperEarningsLimit { get { return 42475; } }
-        public decimal PrimaryThreshold { get { return 7605; } }
-        public decimal SecondaryThreshold { get { return 7605; } }
-        public decimal UpperAccrualPoint { get { return 40040; } }
+        public decimal LowerEarningsLimit { get { return 5824; } }
+        public decimal PrimaryThreshold { get { return 8060; } }
+        public decimal SecondaryThreshold { get { return 8112; } }
+        public decimal UpperEarningsLimit { get { return 43004; } }
+        public decimal UpperSecondaryThreshold { get { return 43004; } }
+        public decimal ApprenticeUpperSecondaryThreshold { get { return 43004; } }
 
-        public decimal StudentLoanThreshold { get { return 15795; } }
+        public decimal StudentLoanThreshold { get { return 17495; } }
         public decimal StudentLoanRate { get { return 0.09m; } }
 
         public decimal DeaProtectedEarnings { get { return 0.6m; } }
 
-        public decimal PensionLowerThreshold { get { return 5564m; } }
-        public decimal PensionAutomaticEnrolment { get { return 8105m; } }
-        public decimal PensionUpperThreshold { get { return 42475m; } }
+        public decimal PensionLowerThreshold { get { return 5824m; } }
+        public decimal PensionAutomaticEnrolment { get { return 10000m; } }
+        public decimal PensionUpperThreshold { get { return 43000m; } }
 
-        public decimal UpperSecondaryThreshold
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
 
-        public decimal ApprenticeUpperSecondaryThreshold
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public decimal UpperAccrualPoint { get { throw new NotImplementedException(); } }
     }
 }

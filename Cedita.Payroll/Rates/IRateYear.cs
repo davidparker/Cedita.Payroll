@@ -21,6 +21,8 @@ namespace Cedita.Payroll.Rates
         decimal PrimaryThreshold { get; }
         decimal SecondaryThreshold { get; }
         decimal UpperAccrualPoint { get; }
+        decimal UpperSecondaryThreshold { get; }
+        decimal ApprenticeUpperSecondaryThreshold { get; }
 
         decimal StudentLoanThreshold { get; }
         decimal StudentLoanRate { get; }
