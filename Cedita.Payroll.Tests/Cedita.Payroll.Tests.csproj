@@ -52,6 +52,9 @@
   <ItemGroup>
     <Compile Include="AdminTests.cs" />
     <Compile Include="NiTests.cs" />
+    <Compile Include="PayeTests.2015.cs" />
+    <Compile Include="PayeTests.2014.cs" />
+    <Compile Include="PayeTests.2013.cs" />
     <Compile Include="PayeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentLoanTests.cs" />

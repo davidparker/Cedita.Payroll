@@ -248,7 +248,7 @@ namespace Cedita.Payroll
                 taxCalc.ln -= taxToDate;
 
             // Ensure that no more than 50% of gross this week is deducted
-            if (PrefixCode(taxCode))
+            if (taxYear >= 2015 || PrefixCode(taxCode))
                 taxCalc.ln = Math.Min(taxCalc.ln, TaxMath.Truncate(gross * .5m, 2));
 
             return taxCalc.ln;
