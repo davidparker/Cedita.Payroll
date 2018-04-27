@@ -969,5 +969,194 @@
         "Multiplier": 0.45
       }
     ]
+  },
+  {
+    "TaxYear": 2018,
+    "DefaultTaxCode": "1185L",
+
+    "LowerEarningsLimit": 6032,
+    "PrimaryThreshold": 8424,
+    "SecondaryThreshold": 8424,
+    "UpperEarningsLimit": 46350,
+    "UpperSecondaryThreshold": 46350,
+    "ApprenticeUpperSecondaryThreshold": 46350,
+
+    "Plan1StudentLoanThreshold": 18330,
+    "Plan1StudentLoanRate": 0.09,
+    "Plan2StudentLoanThreshold": 25000,
+    "Plan2StudentLoanRate": 0.09,
+
+    "DeaProtectedEarnings": 0.6,
+
+    "PensionLowerThreshold": 6032,
+    "PensionAutomaticEnrolment": 10000,
+    "PensionUpperThreshold": 46350,
+
+    "FixedCodes": [
+      {
+        "Code": "BR",
+        "Rate": 0.2
+      },
+      {
+        "Code": "D0",
+        "Rate": 0.4
+      },
+      {
+        "Code": "D1",
+        "Rate": 0.45
+      },
+      {
+        "Code": "N1",
+        "Rate": 0
+      },
+      {
+        "Code": "NT",
+        "Rate": 0
+      }
+    ],
+    "NiRates": [
+      {
+        "Code": "A",
+        "EeB": 0,
+        "EeC": 12,
+        "EeD": 2,
+        "ErB": 0,
+        "ErC": 13.8,
+        "ErD": 13.8
+      },
+      {
+        "Code": "B",
+        "EeB": 0,
+        "EeC": 5.85,
+        "EeD": 2,
+        "ErB": 0,
+        "ErC": 13.8,
+        "ErD": 13.8
+      },
+      {
+        "Code": "C",
+        "EeB": 0,
+        "EeC": 0,
+        "EeD": 0,
+        "ErB": 0,
+        "ErC": 13.8,
+        "ErD": 13.8
+      },
+      {
+        "Code": "H",
+        "EeB": 0,
+        "EeC": 12,
+        "EeD": 2,
+        "ErB": 0,
+        "ErC": 0,
+        "ErD": 13.8
+      },
+      {
+        "Code": "J",
+        "EeB": 0,
+        "EeC": 2,
+        "EeD": 2,
+        "ErB": 0,
+        "ErC": 13.8,
+        "ErD": 13.8
+      },
+      {
+        "Code": "M",
+        "EeB": 0,
+        "EeC": 12,
+        "EeD": 2,
+        "ErB": 0,
+        "ErC": 0,
+        "ErD": 13.8
+      },
+      {
+        "Code": "Z",
+        "EeB": 0,
+        "EeC": 2,
+        "EeD": 2,
+        "ErB": 0,
+        "ErC": 0,
+        "ErD": 13.8
+      },
+      {
+        "Code": "X",
+        "EeB": 0,
+        "EeC": 0,
+        "EeD": 0,
+        "ErB": 0,
+        "ErC": 0,
+        "ErD": 0
+      }
+    ],
+    "Brackets": [
+      {
+        "From": 0,
+        "To": 34500,
+        "Multiplier": 0.2
+      },
+      {
+        "From": 34500,
+        "To": 150000,
+        "Multiplier": 0.4
+      },
+      {
+        "From": 150000,
+        "To": 2147483647,
+        "Multiplier": 0.45
+      }
+    ],
+    "ScottishBrackets": [
+      {
+        "From": 0,
+        "To": 2000,
+        "Multiplier": 0.19
+      },
+      {
+        "From": 2000,
+        "To": 12150,
+        "Multiplier": 0.2
+      },
+      {
+        "From": 12150,
+        "To": 31580,
+        "Multiplier": 0.21
+      },
+      {
+        "From": 31580,
+        "To": 150000,
+        "Multiplier": 0.41
+      },
+      {
+        "From": 150000,
+        "To": 2147483647,
+        "Multiplier": 0.46
+      }
+    ],
+    "ScottishFixedCodes": [
+      {
+        "Code": "BR",
+        "Rate": 0.2
+      },
+      {
+        "Code": "D0",
+        "Rate": 0.21
+      },
+      {
+        "Code": "D1",
+        "Rate": 0.41
+      },
+      {
+        "Code": "D2",
+        "Rate": 0.46
+      },
+      {
+        "Code": "N1",
+        "Rate": 0
+      },
+      {
+        "Code": "NT",
+        "Rate": 0
+      }
+    ]
   }
 ]

@@ -28,7 +28,7 @@ namespace Cedita.Payroll.Engines.Paye
         {
             var taxableIncome = Math.Max(Math.Floor(CalculationContainer.Pn - CalculationContainer.na1), 0);
             FixedCode fixedCode;
-            if ((fixedCode = TaxYearSpecificProvider.GetFixedCode(CalculationContainer.TaxCode.SanitisedTaxCode)) != null)
+            if ((fixedCode = TaxYearSpecificProvider.GetFixedCode(CalculationContainer.TaxCode.SanitisedTaxCode, CalculationContainer.TaxCode.IsScotlandTax)) != null)
             {
                 CalculationContainer.Ln = taxableIncome * fixedCode.Rate;
             }

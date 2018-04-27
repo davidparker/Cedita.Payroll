@@ -7,6 +7,7 @@ namespace Cedita.Payroll.Engines.Paye
     [EngineApplicableTaxYear(TaxYearStartYear = 2015)]
     [EngineApplicableTaxYear(TaxYearStartYear = 2016)]
     [EngineApplicableTaxYear(TaxYearStartYear = 2017)]
+    [EngineApplicableTaxYear(TaxYearStartYear = 2018)]
     public class PayeVersion13 : PayeVersion12
     {
         protected override void Calculateln()

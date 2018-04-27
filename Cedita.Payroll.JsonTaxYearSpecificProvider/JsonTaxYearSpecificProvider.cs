@@ -56,18 +56,18 @@ namespace Cedita.Payroll
             return CurrentTaxYear.NiRates.SingleOrDefault(m => m.Code == niCode);
         }
 
-        public FixedCode GetFixedCode(string taxCode)
+        public FixedCode GetFixedCode(string taxCode, bool scottish = false)
         {
             EnsureTaxYearSet();
 
-            return CurrentTaxYear.FixedCodes.SingleOrDefault(m => m.Code == taxCode);
+            return ((scottish ? CurrentTaxYear.ScottishFixedCodes : null) ?? CurrentTaxYear.FixedCodes).SingleOrDefault(m => m.Code == taxCode);
         }
 
-        public bool IsFixedCode(string taxCode)
+        public bool IsFixedCode(string taxCode, bool scottish = false)
         {
             EnsureTaxYearSet();
-
-            return CurrentTaxYear.FixedCodes.Any(m => m.Code == taxCode);
+            
+            return ((scottish ? CurrentTaxYear.ScottishFixedCodes : null) ?? CurrentTaxYear.FixedCodes).Any(m => m.Code == taxCode);
         }
 
         public T GetSpecificValue<T>(TaxYearSpecificValues specificValueType)

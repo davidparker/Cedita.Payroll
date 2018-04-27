@@ -1,26 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard1.4;netstandard2.0;net471</TargetFrameworks>
+    <TargetFrameworks>net45;netstandard2.0;net471</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.3.1.0-pre</Version>
+    <Version>1.0</Version>
     <Authors>Cedita</Authors>
     <Company>Cedita Ltd</Company>
     <Description>.NET Standard implementation of the United Kingdom's HMRC UK Tax legislation.</Description>
-    <Copyright>Cedita Ltd 2017</Copyright>
+    <Copyright>Cedita Ltd 2018</Copyright>
     <PackageProjectUrl>https://www.cedita.com/</PackageProjectUrl>
     <PackageIconUrl>https://www.cedita.com/nuget.png</PackageIconUrl>
     <RepositoryUrl>https://www.github.com/cedita/Cedita.Payroll</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>payroll hmrc tax nationalinsurance rti ni calculations uk uktax json cedita taxyearspecifics</PackageTags>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard1.4' AND '$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0' AND '$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputType>library</OutputType>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
-    <PackageReference Include="System.ValueTuple" Version="4.4.0" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.4'">
-    <PackageReference Include="System.Reflection" Version="4.3.0" />
     <PackageReference Include="System.ValueTuple" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>

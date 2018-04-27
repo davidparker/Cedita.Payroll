@@ -27,8 +27,8 @@ namespace Cedita.Payroll.Engines
         T GetSpecificValue<T>(TaxYearSpecificValues specificValueType);
         decimal GetPeriodTaxYearValue(TaxYearSpecificValues specificValueType, PayPeriods period);
         NationalInsuranceCode GetCodeSpecifics(char niCode);
-        bool IsFixedCode(string taxCode);
-        FixedCode GetFixedCode(string taxCode);
+        bool IsFixedCode(string taxCode, bool scottish = false);
+        FixedCode GetFixedCode(string taxCode, bool scottish = false);
         IEnumerable<TaxBracket> GetTaxBrackets(bool scottish = false);
     }
 }

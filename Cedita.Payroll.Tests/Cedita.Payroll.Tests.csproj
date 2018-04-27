@@ -63,10 +63,14 @@
   <ItemGroup>
     <Compile Include="NiTests.2015.cs" />
     <Compile Include="NiTests.2016.cs" />
+    <Compile Include="NiTests.2018.cs" />
     <Compile Include="NiTests.2017.cs" />
     <Compile Include="NiTests.cs" />
     <Compile Include="NiTests.2014.cs" />
+    <Compile Include="PayeTests.2018.ScottishRate.cs" />
+    <Compile Include="PayeTests.2018.cs" />
     <Compile Include="PayeTests.2017.Fortnightly.cs" />
+    <Compile Include="StudentLoanTests.2018.cs" />
     <Compile Include="StudentLoanTests.2017.cs" />
     <Compile Include="StudentLoanTests.2016.cs" />
     <Compile Include="StudentLoanTests.cs" />

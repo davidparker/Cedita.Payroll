@@ -84,6 +84,7 @@ namespace Cedita.Payroll.Models
         #region Workings
         protected readonly string[] NoAdjustmentCodes = { "BR", "D", "D0", "D1", "NT", "N1" };
         protected readonly string[] PrefixCodes = { "K" };
+        protected readonly string[] ScottishNoAdjustmentCodes = { "D2" };
 
         protected TaxCode() { }
         
@@ -126,6 +127,11 @@ namespace Cedita.Payroll.Models
         protected void DetermineNoAdjustmentCode()
         {
             IsNoAdjustmentCode = NoAdjustmentCodes.Contains(SanitisedTaxCode);
+            // Check for Scotland specific No Adjustment Code
+            if (IsScotlandTax && !IsNoAdjustmentCode)
+            {
+                IsNoAdjustmentCode = ScottishNoAdjustmentCodes.Contains(SanitisedTaxCode);
+            }
         }
         protected void DeterminePrefixCode()
         {
